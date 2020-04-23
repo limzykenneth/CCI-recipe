@@ -25,8 +25,7 @@ app.get("/comments", function(request, response){
 app.post("/comments", function(request, response){
   let comments = fs.readFileSync("./comments.txt", {encoding: "utf8"});
   comments += "\n" + request.body.comment;
-  console.log(comments);
-  fs.writeFile("./comments.txt", )
+  fs.writeFileSync("./comments.txt", comments, {encoding: "utf8"});
 });
 
 // listen for requests :)
