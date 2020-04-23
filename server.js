@@ -2,14 +2,8 @@
 // where your node app starts
 
 const express = require("express");
+const fs = require("fs");
 const app = express();
-
-// our default array of dreams
-const dreams = [
-  "Find and count some sheep",
-  "Climb a really tall mountain",
-  "Wash the dishes"
-];
 
 // make all the files in 'public' available
 // https://expressjs.com/en/starter/static-files.html
@@ -20,10 +14,10 @@ app.get("/", function(request, response) {
   response.sendFile(__dirname + "/views/index.html");
 });
 
-// send the default array of dreams to the webpage
-app.get("/dreams", function(request, response){
-  // express helps us take JS objects and send them as JSON
-  response.json(dreams);
+app.get("/comments", function(request, response){
+  let comments = fs.readFileSync("./comments.txt");
+  console.log(comments);
+  response.json({});
 });
 
 // listen for requests :)

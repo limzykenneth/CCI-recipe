@@ -1,41 +1,58 @@
-// client-side js, loaded by index.html
-// run by the browser each time the page is loaded
+let servingSlider;
+let servingButton;
+let servingSize;
+let ingredientAmount;
+let initialServingSize;
+let currentSize;
+let commentButton;
+let commentBox;
+let commentInput;
 
-console.log("hello world :o");
+function setup() {
+  noCanvas();
+  
+  // Selectors
+  servingSlider = select("#serving-slider");
+  servingButton = select("#serving-button");
+  servingSize = select("#serving-size");
+  ingredientAmount = selectAll(".ingredient-amount");
+  commentButton = select("#submit-comment");
+  commentBox = select("#comments-box");
+  commentInput = select("#new-comment");
+  
+  
+  // Changing serving size
+  initialServingSize = servingSlider.value();
+  currentSize = initialServingSize;
+  
+  servingButton.mouseClicked(function(){
+    let multiplier = currentSize/initialServingSize;
 
-// define variables that reference elements on our page
-const dreamsList = document.getElementById("dreams");
-const dreamsForm = document.querySelector("form");
+    for(let i=0; i<ingredientAmount.length; i++){
+      let amt = ingredientAmount[i].html();
+      let newAmt = amt * multiplier;
+      ingredientAmount[i].html(newAmt);
+    }
+    
+    initialServingSize = currentSize;
+  });
+  
+  
+  // Leaving comments
+  commentButton.mouseClicked(function(){
+    let comment = commentInput.value();
+    let el = document.createElement("article");
+    el.append(comment);
+    el.className = "comments";
+    commentBox.elt.appendChild(el);
 
-// a helper function that creates a list item for a given dream
-function appendNewDream(dream) {
-  const newListItem = document.createElement("li");
-  newListItem.innerText = dream;
-  dreamsList.appendChild(newListItem);
+    commentInput.value("");
+  });
+  
+  
 }
 
-// fetch the initial list of dreams
-fetch("/dreams")
-  .then(response => response.json()) // parse the JSON from the server
-  .then(dreams => {
-    // remove the loading text
-    dreamsList.firstElementChild.remove();
-  
-    // iterate through every dream and add it to our page
-    dreams.forEach(appendNewDream);
-  
-    // listen for the form to be submitted and add a new dream when it is
-    dreamsForm.addEventListener("submit", event => {
-      // stop our form submission from refreshing the page
-      event.preventDefault();
-
-      // get dream value and add it to the list
-      let newDream = dreamsForm.elements.dream.value;
-      dreams.push(newDream);
-      appendNewDream(newDream);
-
-      // reset form
-      dreamsForm.reset();
-      dreamsForm.elements.dream.focus();
-    });
-  });
+function draw(){
+  currentSize = servingSlider.value();
+  servingSize.html(currentSize);
+}
