@@ -15,9 +15,9 @@ app.get("/", function(request, response) {
 });
 
 app.get("/comments", function(request, response){
-  let comments = fs.readFileSync("./comments.txt");
-  console.log(comments);
-  response.json({});
+  let comments = fs.readFileSync("./comments.txt", {encoding: "utf8"});
+  let commentsArray = comments.split("\n");
+  response.json(commentsArray);
 });
 
 // listen for requests :)

@@ -7,6 +7,11 @@ let currentSize;
 let commentButton;
 let commentBox;
 let commentInput;
+let comments;
+
+function preload(){
+  comments = loadJSON("/comments");
+}
 
 function setup() {
   noCanvas();
@@ -36,6 +41,11 @@ function setup() {
     
     initialServingSize = currentSize;
   });
+  
+  for(let i in comments){
+    console.log(comments[i])
+  }
+  commentBox.html("<article class='comments'>" + comments[0] + "</article>");
   
   
   // Leaving comments
