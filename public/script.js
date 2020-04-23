@@ -43,9 +43,12 @@ function setup() {
   });
   
   for(let i in comments){
-    console.log(comments[i])
+    // commentBox.html("<article class='comments'>" + comments[i] + "</article>");
+    let el = document.createElement("article");
+    el.append(comments[i]);
+    el.className = "comments";
+    commentBox.elt.appendChild(el);
   }
-  commentBox.html("<article class='comments'>" + comments[0] + "</article>");
   
   
   // Leaving comments
@@ -57,6 +60,10 @@ function setup() {
     commentBox.elt.appendChild(el);
 
     commentInput.value("");
+    
+    httpPost("/comments", {
+      "comment": comment
+    })
   });
   
   

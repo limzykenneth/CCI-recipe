@@ -5,6 +5,8 @@ const express = require("express");
 const fs = require("fs");
 const app = express();
 
+app.use(express.json());
+
 // make all the files in 'public' available
 // https://expressjs.com/en/starter/static-files.html
 app.use(express.static("public"));
@@ -18,6 +20,13 @@ app.get("/comments", function(request, response){
   let comments = fs.readFileSync("./comments.txt", {encoding: "utf8"});
   let commentsArray = comments.split("\n");
   response.json(commentsArray);
+});
+
+app.post("/comments", function(request, response){
+  let comments = fs.readFileSync("./comments.txt", {encoding: "utf8"});
+  comments += "\n" + request.body.comment;
+  console.log(comments);
+  fs.writeFile("./comments.txt", )
 });
 
 // listen for requests :)
