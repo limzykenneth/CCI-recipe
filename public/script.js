@@ -10,7 +10,7 @@ let commentInput;
 let comments;
 
 function preload(){
-  comments = loadJSON("/comments");
+  comments = loadJSON("/comments/pancakes");
 }
 
 function setup() {

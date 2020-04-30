@@ -28,14 +28,11 @@ app.get("/teriyaki-chicken", function(request, response){
   response.sendFile(__dirname + "/views/teriyaki-chicken.html");
 });
 
-app.get("/comments", function(request, response){
-  // let comments = fs.readFileSync("./comments.txt", {encoding: "utf8"});
-  // let commentsArray = comments.split("\n");
-  // response.json(commentsArray);
-  
+app.get("/comments/:name", function(request, response){
+  let recipeName = request.params.name;
   let comments = fs.readFileSync("./comments.json", {encoding: "utf8"});
   let commentsObj = JSON.parse(comments);
-  response.json(commentsObj);
+  response.json(commentsObj[recipeName]);
 });
 
 app.post("/comments", function(request, response){
