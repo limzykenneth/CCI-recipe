@@ -24,6 +24,10 @@ app.get("/tiramisu", function(request, response){
   response.sendFile(__dirname + "/views/tiramisu.html");
 });
 
+app.get("/teriyaki-chicken", function(request, response){
+  response.sendFile(__dirname + "/views/teriyaki-chicken.html");
+});
+
 app.get("/comments", function(request, response){
   let comments = fs.readFileSync("./comments.txt", {encoding: "utf8"});
   let commentsArray = comments.split("\n");
@@ -34,6 +38,7 @@ app.post("/comments", function(request, response){
   let comments = fs.readFileSync("./comments.txt", {encoding: "utf8"});
   comments += "\n" + request.body.comment;
   fs.writeFileSync("./comments.txt", comments, {encoding: "utf8"});
+  re
 });
 
 // listen for requests :)
