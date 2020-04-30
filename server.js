@@ -2,8 +2,12 @@
 // where your node app starts
 
 const express = require("express");
+const exphbs = require('express-handlebars');
 const fs = require("fs");
 const app = express();
+
+app.engine('handlebars', exphbs());
+app.set('view engine', 'handlebars');
 
 app.use(express.json());
 
@@ -13,15 +17,23 @@ app.use(express.static("public"));
 
 // https://expressjs.com/en/starter/basic-routing.html
 app.get("/", function(request, response){
-  response.sendFile(__dirname + "/views/index.html");
+  response.render("index");
 });
 
 app.get("/pancakes", function(request, response) {
-  response.sendFile(__dirname + "/views/pancakes.html");
+  // response.sendFile(__dirname + "/views/pancakes.html");
+  response.render("recipe", {
+    title: "Fluffy American Pancakes",
+    servings: 4
+  });
 });
 
 app.get("/tiramisu", function(request, response){
-  response.sendFile(__dirname + "/views/tiramisu.html");
+  // response.sendFile(__dirname + "/views/tiramisu.html");
+  response.render("recipe", {
+    title: "Tiramisu",
+    servings: 6
+  });
 });
 
 app.get("/teriyaki-chicken", function(request, response){
