@@ -12,6 +12,19 @@ h1, h2{
   margin: 1rem 0;
 }
 
+#page-header {
+  background-color: black;
+  font-family: "Futura", "Helvetica", san-serif;
+  font-size: 18px;
+  color: white;
+  padding: 1rem;
+}
+
+#page-header a{
+  color: white;
+  text-decoration: none;
+}
+
 #page-container {
   margin: 0 auto;
   padding: 0;
