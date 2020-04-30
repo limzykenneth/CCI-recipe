@@ -13,7 +13,7 @@ app.use(express.static("public"));
 
 // https://expressjs.com/en/starter/basic-routing.html
 app.get("/", function(request, response){
-  response
+  response.sendFile(__dirname + "/views/index.html");
 });
 
 app.get("/pancakes", function(request, response) {
