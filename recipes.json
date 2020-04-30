@@ -1,0 +1,15 @@
+{
+  "pancakes": {
+    "title": "Fluffy American Pancakes",
+    "servings": 4,
+    "ingredients": [
+      "<li class=\"ingredients\"><span class=\"ingredient-amount\">135</span>g/<span class=\"ingredient-amount\">4.75</span>oz plain flour</li>",
+      "<li class=\"ingredients\"><span class=\"ingredient-amount\">1</span> tsp baking powder</li>",
+      "<li class=\"ingredients\"><span class=\"ingredient-amount\">0.5</span> tsp salt</li>",
+      "<li class=\"ingredients\"><span class=\"ingredient-amount\">2</span> tbsp caster sugar</li>",
+      "<li class=\"ingredients\"><span class=\"ingredient-amount\">130</span>ml/<span class=\"ingredient-amount\">4.5</span>fl oz milk</li>",
+      "<li class=\"ingredients\"><span class=\"ingredient-amount\">1</span> large egg, lightly beaten</li>",
+      "<li class=\"ingredients\"><span class=\"ingredient-amount\">2</span> tbsp melted butter (allowed to cool slightly) or olive oil, plus extra for cooking</li>"
+    ]
+  }
+}

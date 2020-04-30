@@ -21,15 +21,13 @@ app.get("/", function(request, response){
 });
 
 app.get("/pancakes", function(request, response) {
-  // response.sendFile(__dirname + "/views/pancakes.html");
-  response.render("recipe", {
-    title: "Fluffy American Pancakes",
-    servings: 4
-  });
+  let recipes = fs.readFileSync("./recipes.json", {encoding: "utf8"});
+  let recipesObj = JSON.parse(recipes);
+  console.log(recipesObj.pancakes);
+  response.render("recipe", recipesObj.pancakes);
 });
 
 app.get("/tiramisu", function(request, response){
-  // response.sendFile(__dirname + "/views/tiramisu.html");
   response.render("recipe", {
     title: "Tiramisu",
     servings: 6
@@ -37,7 +35,10 @@ app.get("/tiramisu", function(request, response){
 });
 
 app.get("/teriyaki-chicken", function(request, response){
-  response.sendFile(__dirname + "/views/teriyaki-chicken.html");
+  response.render("recipe", {
+    title: "Teriyaki Chicken Leg",
+    servings: 2
+  });
 });
 
 app.get("/comments/:name", function(request, response){
