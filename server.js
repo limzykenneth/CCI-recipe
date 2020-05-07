@@ -45,9 +45,13 @@ app.get("/comments/:name", function(request, response){
   response.json(commentsObj[recipeName]);
 });
 
-app.post("/comments", function(request, response){
-  let comments = fs.readFileSync("./comments.txt", {encoding: "utf8"});
-  comments += "\n" + request.body.comment;
+app.post("/comments/:name", function(request, response){
+  let recipeName = request.params.name;
+  let comments = fs.readFileSync("./comments.json", {encoding: "utf8"});
+  let commentsObj = JSON.parse(comments);
+
+  commentsObj[recipeName]
+  
   fs.writeFileSync("./comments.txt", comments, {encoding: "utf8"});
   response.send("New comment added");
 });
