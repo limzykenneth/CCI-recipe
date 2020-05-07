@@ -1,6 +1,7 @@
 {
   "pancakes": {
     "title": "Fluffy American Pancakes",
+    "image": "https://ichef.bbci.co.uk/food/ic/food_16x9_1600/recipes/fluffyamericanpancak_74828_16x9.jpg",
     "servings": 4,
     "methods": [
       "Sift the flour, baking powder, salt and caster sugar into a large bowl. In a separate bowl or jug, lightly whisk together the milk and egg, then whisk in the melted butter.",
@@ -49,6 +50,7 @@
   },
   "tiramisu": {
     "title": "Tiramisu",
+    "image": "https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe/recipe-image/2012/07/recipe-image-legacy-id-1001515_11.jpg?itok=JISkN20Z",
     "servings": 6,
     "methods": [
       "Put a <span class=\"ingredient-amount\">568</span>ml pot double cream, <span class=\"ingredient-amount\">250</span>g tub mascarpone, <span class=\"ingredient-amount\">75</spam>ml marsala and <span class=\"ingredient-amount\">5</span> tbsp golden caster sugar in a large bowl.",
@@ -99,6 +101,59 @@
         "amount": "2",
         "unit": "tsp",
         "name": "cocoa powder"
+      }
+    ]
+  },
+  "teriyakiChicken": {
+    "title": "Teriyaki Chicken Leg",
+    "image": "https://www.japanesecooking101.com/wp-content/uploads/2018/12/DSC00390b.jpg",
+    "servings": 2,
+    "methods": [
+      "Trim excess fat from chicken legs. Sprinkle salt lightly over chicken, and leave for 10-15 minutes.",
+      "Remove any moisture with paper.",
+      "Heat oil in a heavy frying pan, add chicken skin side down, and cook until browned. Turn over and cook the other side until browned.",
+      "Remove any oil in the pan with a paper towel. Add water, sugar, Soy Sauce, and Sake and stir. Cover and cook for 15-20 minutes. Remove the cover, and add Mirin to the sauce. Reduce until the sauce is thick if not thickened already. Coat the chicken with the sauce well."
+    ],
+    "ingredients": [
+      {
+        "amount": "2",
+        "unit": "",
+        "name": "bone-in chicken legs (thighs) "
+      },
+      {
+        "amount": "",
+        "unit": "",
+        "name": "salt"
+      },
+      {
+        "amount": "1",
+        "unit": " tbsp",
+        "name": "oil"
+      },
+      {
+        "amount": "240",
+        "unit": "ml",
+        "name": "water"
+      },
+      {
+        "amount": "2",
+        "unit": " tbsp",
+        "name": "sugar"
+      },
+      {
+        "amount": "2",
+        "unit": " tbsp",
+        "name": "soy sauce"
+      },
+      {
+        "amount": "1",
+        "unit": " tbsp",
+        "name": "mirin"
+      },
+      {
+        "amount": "1",
+        "unit": " tbsp",
+        "name": "sake"
       }
     ]
   }
