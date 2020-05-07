@@ -10,13 +10,41 @@
       "Serve with lashings of real maple syrup and extra butter, if you like."
     ],
     "ingredients": [
-      "<span class=\"ingredient-amount\">135</span>g plain flour",
-      "<span class=\"ingredient-amount\">1</span> tsp baking powder",
-      "<span class=\"ingredient-amount\">0.5</span> tsp salt",
-      "<span class=\"ingredient-amount\">2</span> tbsp caster sugar",
-      "<span class=\"ingredient-amount\">130</span>ml/<span class=\"ingredient-amount\">4.5</span>fl oz milk",
-      "<span class=\"ingredient-amount\">1</span> large egg, lightly beaten",
-      "<span class=\"ingredient-amount\">2</span> tbsp melted butter (allowed to cool slightly) or olive oil, plus extra for cooking"
+      {
+        "amount": "135",
+        "unit": "g",
+        "name": "plain flour"
+      },
+      {
+        "amount": "1",
+        "unit": " tsp",
+        "name": "baking powder"
+      },
+      {
+        "amount": "0.5",
+        "unit": " tsp",
+        "name": "salt"
+      },
+      {
+        "amount": "2",
+        "unit": " tbsp",
+        "name": "caster sugar"
+      },
+      {
+        "amount": "130",
+        "unit": "ml",
+        "name": "milk"
+      },
+      {
+        "amount": "1",
+        "unit": "",
+        "name": "large egg, lightly beaten"
+      },
+      {
+        "amount": "2",
+        "unit": " tbsp",
+        "name": "melted butter (allowed to cool slightly) or olive oil, plus extra for cooking"
+      }
     ]
   }
 }
