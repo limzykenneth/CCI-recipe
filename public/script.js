@@ -62,7 +62,7 @@ function setup() {
 
     commentInput.value("");
     
-    httpPost("/comments", {
+    httpPost("/comments" + window.location.pathname, {
       "comment": comment
     })
   });

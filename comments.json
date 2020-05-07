@@ -1,13 +1,1 @@
-{
-  "pancakes": [
-    "This recipe is great!",
-    "I made it yesterday, it's delicious.",
-    "Hello everyone",
-    "What's up?",
-    "I like pancakes"
-  ],
-  "tiramisu": [
-    "It is said to be invented in a town called Treviso in Italy."
-  ],
-  "teriyaki-chicken": []
-}
+{"pancakes":["This recipe is great!","I made it yesterday, it's delicious.","Hello everyone","What's up?","I like pancakes"],"tiramisu":["It is said to be invented in a town called Treviso in Italy.","Can I leave out the marsala"],"teriyaki-chicken":[]}

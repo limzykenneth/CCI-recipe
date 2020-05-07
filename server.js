@@ -50,9 +50,9 @@ app.post("/comments/:name", function(request, response){
   let comments = fs.readFileSync("./comments.json", {encoding: "utf8"});
   let commentsObj = JSON.parse(comments);
 
-  commentsObj[recipeName]
+  commentsObj[recipeName].push(request.body.comment);
   
-  fs.writeFileSync("./comments.txt", comments, {encoding: "utf8"});
+  fs.writeFileSync("./comments.json", JSON.stringify(commentsObj), {encoding: "utf8"});
   response.send("New comment added");
 });
 
