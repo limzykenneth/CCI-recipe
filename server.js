@@ -23,22 +23,19 @@ app.get("/", function(request, response){
 app.get("/pancakes", function(request, response) {
   let recipes = fs.readFileSync("./recipes.json", {encoding: "utf8"});
   let recipesObj = JSON.parse(recipes);
-  console.log(recipesObj.pancakes);
   response.render("recipe", recipesObj.pancakes);
 });
 
 app.get("/tiramisu", function(request, response){
-  response.render("recipe", {
-    title: "Something else",
-    servings: 6
-  });
+  let recipes = fs.readFileSync("./recipes.json", {encoding: "utf8"});
+  let recipesObj = JSON.parse(recipes);
+  response.render("recipe", recipesObj.tiramisu);
 });
 
 app.get("/teriyaki-chicken", function(request, response){
-  response.render("recipe", {
-    title: "Teriyaki Chicken Leg",
-    servings: 2
-  });
+  let recipes = fs.readFileSync("./recipes.json", {encoding: "utf8"});
+  let recipesObj = JSON.parse(recipes);
+  response.render("recipe", recipesObj.teriyakiChicken);
 });
 
 app.get("/comments/:name", function(request, response){
