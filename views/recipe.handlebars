@@ -26,7 +26,7 @@
       <section id="serving-container">
         <h2 class="header-2 title" id="serving-title">Serving size</h2>
         <div>
-          <input type="range" name="serving-size" id="serving-slider" min="1" max="12" step="1" value="{{ servings }}">
+          <input type="range" name="serving-size" id="serving-slider" min="1" max="12" step="1" value="{{ servings }}" autocomplete="off">
           <button id="serving-button">Submit</button>
           <div id="serving-size">{{ servings }}</div>
         </div>
@@ -54,7 +54,7 @@
         <div>
           <label for="comment">Leave your comment:</label>
           <input type="text" id="new-comment" name="comment" required
-   minlength="1" maxlength="256" size="30">
+   minlength="1" maxlength="256" size="30" autocomplete="off">
           <button id="submit-comment">Submit</button>
         </div>
       </section>
